@@ -5,7 +5,7 @@ import winsound
 ######################### 
 # import os
 # def soundAlert():
-#     os.system("start c:/Users/Luke/OneDrive/Documents/python_scripts/Pomodoro/8bit.wav")
+#     os.system("start FILE_PATH_HERE")
 #########################
 
 def soundAlert():
