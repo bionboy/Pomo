@@ -1,9 +1,12 @@
 import time
-# import os
 import winsound
-# def soundAlert():
-#     os.system("start c:/Users/Luke/OneDrive/Documents/python_scripts/Pomodoro/8bit.wav")
 
+# Below is code that supports the playback of .wav files
+######################### 
+# import os
+# def soundAlert():
+#     os.system("start FILE_PATH_HERE")
+#########################
 
 def soundAlert():
     winsound.Beep(600, 200)
@@ -21,7 +24,6 @@ def pomoTimer(timeVal, soundOpt):
         countMin = int(countTime / 60)
         countSec = int(countTime % 60)
         print countMin, ":", countSec
-        # print(countMin + ":" + countSec)
         countTime -= 1
         if soundOpt:
             if int(i % 2) == 0:
@@ -30,11 +32,9 @@ def pomoTimer(timeVal, soundOpt):
                 winsound.Beep(1000, 10)
     soundAlert()
     raw_input("Press Enter to continue...")
-    # input("Press Enter to continue...")
-
 
 def pomodoro():
-    workTime = 25 # float(input("Work time?: "))
+    workTime = 25
     pauseTime = float(input("Break time?: "))
     breakTime = float(input("Long break time?: "))
     breakFreq = int(input("Work sessions until long break?: "))
